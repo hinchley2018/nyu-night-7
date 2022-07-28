@@ -33,7 +33,8 @@ console.log("elements", elements)
 //get things by tag
 document.querySelector("ul")
 //by class
-document.querySelector(".inventory-list")
+let inventoryList = document.querySelector(".inventory-list")
+let cartList = document.querySelector(".cart-list")
 //by id
 document.querySelector("#pasta")
 
@@ -62,3 +63,28 @@ for (let index = 0; index < saleItems.length; index++) {
     console.log("item at index", index, element)
     element.style.backgroundColor = "yellow"
 }
+
+//add our items to a ul
+//for now add these using js, later the user will
+let pastaLi = document.createElement("li")
+pastaLi.textContent = "Pasta - 1.29"
+pastaLi.setAttribute("class","sale")
+//add the li to the ul group for the cart
+cartList.append(pastaLi)
+
+let potatoesLi = document.createElement("li")
+potatoesLi.textContent = "Potatoes - .30"
+potatoesLi.setAttribute("class","sale")
+//add the li to the ul group for the cart
+cartList.append(potatoesLi)
+
+//remove is a little tricky, make sure to call .remove() only on the tag you want to remove
+//for example if you call document.body.remove() it will remove the entire body
+//now remove the potatoes from cart
+potatoesLi.remove()
+
+//images
+let catImg = document.createElement("img")
+catImg.setAttribute("src","https://placekitten.com/200/200")
+catImg.setAttribute("alt", "cat image")
+document.body.append(catImg)
