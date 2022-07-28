@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,26 +13,40 @@
         }
     </style>
 </head>
+
 <body>
     <!-- each item in inventory can be added to cart -->
     <!-- add buttons to do this in 3rd lesson -->
     <h1>Inventory</h1>
     <h2>Select items to add to your cart</h2>
     <ul class="inventory-list">
-        <li id="steak">Steak - 10.99</li>
-        
-        <li id="tomatoes" class="sale">tomatoes - 1.29</li>
-        <li id="potatoes" class="sale">potatoes - .30</li>
-        <li id="pasta">Pasta - .99</li>
+        <li>
+            <h3 id="steak">Steak - 10.99</h3>
+            <button id="steak-button">Add to cart</button>
+        </li>
+
+        <li>
+            <h3 id="steak" class="sale">tomatoes - 1.29</h3>
+            <button id="tomatoes-button">Add to cart</button>
+        </li>
+        <li>
+            <h3 id="potatoes" class="sale">potatoes - .30</h3>
+            <button id="potatoes-button">Add to cart</button>
+        </li>
+        <li>
+            <h3 id="pasta">Pasta - .99</h3>
+            <button id="pasta-button">Add to cart</button>
+        </li>
     </ul>
-    <button>Add to cart</button>
+
     <hr>
     <h2>Items in your cart</h2>
     <!-- user can remove items from their cart -->
     <ul class="cart-list">
-        
+
     </ul>
-    
+
     <script src="./index.js"></script>
 </body>
+
 </html>
